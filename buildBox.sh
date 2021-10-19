@@ -5,12 +5,12 @@
 #
 
 uName=$( whoami )
-origDir = $( pwd )
+origDir=$( pwd )
 
 myDir=/home/$uName/Pentesting
 myToolDir=/home/$uName/Tools
 tempVIMRC=/home/$uName/Downloads
-homeDir =/home/$uName
+homeDir=/home/$uName
 
 mkdir -p $myDir
 cd $myDir
