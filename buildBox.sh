@@ -73,6 +73,9 @@ sudo apt install -y snmp strongswan
 #
 # fix configs
 #
+sed -i "s/kali/$uName/g" bg-saved.cfg
+sed -i "s/kali/$uName/g" nitrogen.cfg
+
 sudo cp compton.conf /etc/xdg/compton.conf
 sudo cp vimrc /etc/vimrc
 sudo cp bg-saved.cfg $homeDir/.config/nitrogen/bg-saved.cfg
@@ -84,5 +87,11 @@ echo "exec --no-startup-id compton" >> $homeDir/.config/i3/config
 
 # update timezone
 sudo timedatectl set-timezone America/New_York
+
+# restart services
+nitrogen restart
+pkill compton && compton
+
+
 
 sudo updatedb
