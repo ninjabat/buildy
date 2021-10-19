@@ -73,7 +73,7 @@ sudo apt -y autoremove
 
 sudo pip install pyip pycrypto pyopenssl
 
-sudo apt install -y snmp strongswan powercatnet
+sudo apt install -y snmp strongswan powercat
 
 
 #
