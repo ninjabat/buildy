@@ -84,7 +84,7 @@ cp -r tools/ $myToolDir/
 cd $origDir
 sed -i "s/kali/$uName/g" bg-saved.cfg
 sed -i "s/kali/$uName/g" nitrogen.cfg
-mkdir -p $homeDir/.config/nitrogen/ $homeDir/i3/config
+mkdir -p $homeDir/.config/nitrogen/ $homeDir/.config/i3/
 
 sudo cp compton.conf /etc/xdg/compton.conf
 sudo cp vimrc /etc/vimrc
