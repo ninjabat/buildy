@@ -73,14 +73,13 @@ sudo apt -y autoremove
 
 sudo pip install pyip pycrypto pyopenssl
 
-sudo apt install -y snmp strongswan powercat
+sudo apt install -y snmp strongswan powercat 
 
 #
-# copy local tools
+# Copy local tools
 #
 cd $origDir
 cp -r tools/ $myToolDir/
-
 
 #
 # fix configs
