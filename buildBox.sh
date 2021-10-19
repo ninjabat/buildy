@@ -64,8 +64,12 @@ sudo pip install pyip pycrypto pyopenssl
 sudo apt install -y snmp strongswan
 
 
-
+#
 # fix configs
+#
+sudo cp compton.conf /etc/xdg/compton.conf
+sudo cp vimrc /etc/
+
 cd ~
 echo "exec --no-startup-id nitrogen --restore" >> $homeDir/.config/i3/config
 echo "exec --no-startup-id compton" >> $homeDir/.config/i3/config
