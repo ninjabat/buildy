@@ -5,6 +5,7 @@
 #
 
 uName=$( whoami )
+origDir = $( pwd )
 
 myDir=/home/$uName/Pentesting
 myToolDir=/home/$uName/Tools
@@ -14,26 +15,30 @@ homeDir =/home/$uName
 mkdir -p $myDir
 cd $myDir
 
-# fix the repo
-#wget "https://deb.parrot.sh/parrot/pool/main/p/parrot-archive-keyring/parrot-archive-keyring_2020.8%2Bparrot3_all.deb" && sudo dpkg -i parrot-archive-keyring*.deb && rm parrot-archive-keyring*.deb
-
 sudo apt update
 sudo apt install -y gedit vim-gtk xterm i3 nautilus compton nitrogen
 
 
-#sudo cp $tempVIMRC/myVimRC /etc/vim/vimrc
-
 #install ODAT
-mkdir -p $myToolDir/odat
-cd $myToolDir/odat
-wget https://github.com/quentinhardy/odat/releases/download/4.3/odat-linux-libc2.12-x86_64.tar.gz
-tar --extract -f odat-linux-libc2.12-x86_64.tar.gz .
+#mkdir -p $myToolDir/odat
+#cd $myToolDir/odat
+#wget https://github.com/quentinhardy/odat/releases/download/4.3/odat-linux-libc2.12-x86_64.tar.gz
+#tar --extract -f odat-linux-libc2.12-x86_64.tar.gz .
 
 # clone various tools
 cd $myToolDir
 git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git
 git clone https://github.com/sullo/nikto.git
 git clone https://github.com/Ganapati/RsaCtfTool.git
+git clone https://github.com/gchq/CyberChef.git
+
+# install cyberchef
+sudo apt install -y npm
+npm install -g grunt-cli
+cd CyberChef
+sudo npm install
+grunt dev & disown;
+cd ..
 
 # install evilwinrm
 sudo gem install evil-winrm
@@ -53,6 +58,7 @@ sudo pip3 install -r $myToolDir/impacket/requirements.txt
 cd $myToolDir/impacket/
 sudo pip3 install .
 sudo python3 setup.py install
+cd $origDir
 
 # get kerbrute
 mkdir -p $myToolDir/kerbrute
@@ -67,12 +73,13 @@ sudo apt -y autoremove
 
 sudo pip install pyip pycrypto pyopenssl
 
-sudo apt install -y snmp strongswan
+sudo apt install -y snmp strongswan powercatnet
 
 
 #
 # fix configs
 #
+cd $origDir
 sed -i "s/kali/$uName/g" bg-saved.cfg
 sed -i "s/kali/$uName/g" nitrogen.cfg
 
