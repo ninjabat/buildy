@@ -93,11 +93,8 @@ sudo cp compton.conf /etc/xdg/compton.conf
 sudo cp vimrc /etc/vimrc
 sudo cp bg-saved.cfg $homeDir/.config/nitrogen/bg-saved.cfg
 sudo cp nitrogen.cfg $homeDir/.config/nitrogen/nitrogen.cfg
-cp i3config $homeDir/i3/config
+cp i3config $homeDir/.config/i3/config
 
-cd ~
-echo "exec --no-startup-id nitrogen --restore" >> $homeDir/.config/i3/config
-echo "exec --no-startup-id compton" >> $homeDir/.config/i3/config
 
 # update timezone
 sudo timedatectl set-timezone America/New_York
