@@ -34,7 +34,7 @@ git clone https://github.com/gchq/CyberChef.git
 
 # install cyberchef
 sudo apt install -y npm
-npm install -g grunt-cli
+sudo npm install -g grunt-cli
 cd CyberChef
 sudo npm install
 grunt dev & disown;
