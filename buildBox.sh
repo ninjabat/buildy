@@ -30,15 +30,15 @@ cd $myToolDir
 git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git
 git clone https://github.com/sullo/nikto.git
 git clone https://github.com/Ganapati/RsaCtfTool.git
-git clone https://github.com/gchq/CyberChef.git
+#git clone https://github.com/gchq/CyberChef.git
 
 # install cyberchef
-sudo apt install -y npm
-sudo npm install -g grunt-cli
-cd CyberChef
-sudo npm install
-grunt dev & disown;
-cd ..
+#sudo apt install -y npm
+#sudo npm install -g grunt-cli
+#cd CyberChef
+#sudo npm install
+#grunt dev & disown;
+#cd ..
 
 # install evilwinrm
 sudo gem install evil-winrm
