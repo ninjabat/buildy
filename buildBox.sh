@@ -1,9 +1,15 @@
 #!/bin/bash
 
-myDir=/home/kali/Pentesting
-myToolDir=/home/kali/Tools
-tempVIMRC=/home/kali/Downloads
-homeDir =/home/kali
+#
+# usage ./buildBox 
+#
+
+uName=$( whoami )
+
+myDir=/home/$uName/Pentesting
+myToolDir=/home/$uName/Tools
+tempVIMRC=/home/$uName/Downloads
+homeDir =/home/$uName
 
 mkdir -p $myDir
 cd $myDir
@@ -68,7 +74,9 @@ sudo apt install -y snmp strongswan
 # fix configs
 #
 sudo cp compton.conf /etc/xdg/compton.conf
-sudo cp vimrc /etc/
+sudo cp vimrc /etc/vimrc
+sudo cp bg-saved.cfg $homeDir/.config/nitrogen/bg-saved.cfg
+sudo cp nitrogen.cfg $homeDir/.config/nitrogen/nitrogen.cfg
 
 cd ~
 echo "exec --no-startup-id nitrogen --restore" >> $homeDir/.config/i3/config
