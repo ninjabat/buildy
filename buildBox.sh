@@ -68,9 +68,6 @@ chmod +x kerbrute_linux_amd64
 
 cd $myDir
 
-sudo apt -y autoremove
-
-
 sudo pip install pyip pycrypto pyopenssl
 
 sudo apt install -y snmp strongswan powercat 
@@ -103,6 +100,7 @@ sudo timedatectl set-timezone America/New_York
 nitrogen restart
 pkill compton && compton
 
-
+# cleanup 
+sudo apt -y autoremove
 
 sudo updatedb
