@@ -86,6 +86,10 @@ cd $origDir
 sed -i "s/kali/$uName/g" bg-saved.cfg
 sed -i "s/kali/$uName/g" nitrogen.cfg
 mkdir -p $homeDir/.config/nitrogen/ $homeDir/.config/i3/
+echo "exec --no-startup-id nitrogen --restore" >>/etc/i3/config
+echo "exec --no-startup-id compton" >> /etc/i3/config
+
+
 
 sudo cp compton.conf /etc/xdg/compton.conf
 sudo cp vimrc /etc/vimrc
