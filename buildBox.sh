@@ -75,6 +75,12 @@ sudo pip install pyip pycrypto pyopenssl
 
 sudo apt install -y snmp strongswan powercat
 
+#
+# copy local tools
+#
+cd $origDir
+cp -r tools/ $myToolDir/
+
 
 #
 # fix configs
