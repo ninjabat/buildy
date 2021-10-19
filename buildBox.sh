@@ -12,7 +12,7 @@ cd $myDir
 #wget "https://deb.parrot.sh/parrot/pool/main/p/parrot-archive-keyring/parrot-archive-keyring_2020.8%2Bparrot3_all.deb" && sudo dpkg -i parrot-archive-keyring*.deb && rm parrot-archive-keyring*.deb
 
 sudo apt update
-sudo apt install -y cadaver gedit vim-gtk 
+sudo apt install -y gedit vim-gtk xterm i3 nautilus compton nitrogen
 
 
 #sudo cp $tempVIMRC/myVimRC /etc/vim/vimrc
@@ -33,7 +33,12 @@ git clone https://github.com/Ganapati/RsaCtfTool.git
 sudo gem install evil-winrm
 
 # install bloodhound
-sudo apt install -y bloodhound neo4j
+sudo apt install -y bloodhound neo4j 
+
+# install some web tools
+sudo apt install -y cadaver
+sudo apt install -y gobuster
+sudo apt install -y hydra-gtk
 
 # install impacket
 mkdir -p $myToolDir/impacket
@@ -53,16 +58,12 @@ cd $myDir
 
 sudo apt -y autoremove
 
-sudo apt install -y gobuster
 
 sudo pip install pyip pycrypto pyopenssl
 
 sudo apt install -y snmp strongswan
 
-sudo apt install -y hydra-gtk
 
-# quality of life
-sudo apt install -y xterm i3 nautilus compton nitrogen
 
 # fix configs
 cd ~
