@@ -16,7 +16,7 @@ mkdir -p $myDir
 cd $myDir
 
 sudo apt update
-sudo apt install -y gedit vim-gtk xterm i3 nautilus compton nitrogen
+sudo apt install -y gedit vim-gtk xterm i3 nautilus compton nitrogen expect
 
 
 #install ODAT
