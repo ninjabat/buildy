@@ -30,6 +30,7 @@ cd $myToolDir
 git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git
 git clone https://github.com/sullo/nikto.git
 git clone https://github.com/Ganapati/RsaCtfTool.git
+git clone https://github.com/stealthcopter/deepce.git
 #git clone https://github.com/gchq/CyberChef.git
 
 # install cyberchef
