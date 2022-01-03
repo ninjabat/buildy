@@ -23,6 +23,7 @@ sudo apt install -y gedit vim-gtk xterm i3 nautilus compton nitrogen expect loca
 # Copy local tools & backgrounds
 #
 cd $origDir
+mkdir -p $homeDir/Pictures
 cp backgrounds/* $homeDir/Pictures
 
 #
