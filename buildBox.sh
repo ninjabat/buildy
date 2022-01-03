@@ -78,6 +78,7 @@ sudo apt install -y snmp strongswan powercat
 #
 cd $origDir
 cp -r tools/ $myToolDir/
+mkdir -p $homeDir/Pictures
 cp backgrounds/* $homeDir/Pictures
 
 #
