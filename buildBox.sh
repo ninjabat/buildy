@@ -31,6 +31,7 @@ git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-su
 git clone https://github.com/sullo/nikto.git
 git clone https://github.com/Ganapati/RsaCtfTool.git
 git clone https://github.com/stealthcopter/deepce.git
+git clone https://github.com/DominicBreuker/pspy.git
 #git clone https://github.com/gchq/CyberChef.git
 #git clone https://github.com/NebulousAnchor/Aboleth
 # install cyberchef
