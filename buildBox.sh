@@ -94,7 +94,7 @@ echo "exec --no-startup-id compton" >> /etc/i3/config
 
 
 sudo cp compton.conf /etc/xdg/compton.conf
-sudo cp vimrc /etc/vimrc
+sudo cp vimrc /etc/vim/vimrc
 sudo cp bg-saved.cfg $homeDir/.config/nitrogen/bg-saved.cfg
 sudo cp nitrogen.cfg $homeDir/.config/nitrogen/nitrogen.cfg
 cp i3config $homeDir/.config/i3/config
