@@ -53,6 +53,10 @@ sudo apt install -y cadaver
 sudo apt install -y gobuster
 sudo apt install -y hydra-gtk
 
+# install reversing / exploit dev
+sudo apt install gdb-peda 
+sudo apt install ghidra
+
 # install impacket
 mkdir -p $myToolDir/impacket
 git clone https://github.com/SecureAuthCorp/impacket.git $myToolDir/impacket
