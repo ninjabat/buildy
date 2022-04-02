@@ -60,7 +60,7 @@ echo "source /usr/share/gdb-peda/peda.py" >> ~/.gdbinit
 sudo apt install ghidra
 
 #pwn tools
-apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+sudo apt install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade pwntools
 
