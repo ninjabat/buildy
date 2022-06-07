@@ -104,6 +104,9 @@ mkdir -p $homeDir/.config/nitrogen/ $homeDir/.config/i3/
 echo "exec --no-startup-id nitrogen --restore" >>/etc/i3/config
 echo "exec --no-startup-id compton" >> /etc/i3/config
 
+# high DPI for i3
+cat Xresources >> ~.Xresources
+echo "xrdb -merge ~/.Xresources" >> ~/.xinitrc
 
 
 sudo cp compton.conf /etc/xdg/compton.conf
