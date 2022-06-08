@@ -57,7 +57,9 @@ sudo apt install -y hydra-gtk
 sudo apt install gdb-peda 
 echo "source /usr/share/gdb-peda/peda.py" >> ~/.gdbinit
 
+# ghidra & fix UI scaling
 sudo apt install ghidra
+sed -i 's/VMARGS_LINUX=-Dsun.java2d.uiScale=1/VMARGS_LINUX=-Dsun.java2d.uiScale=2/g' $(locate support/launch.properties)
 
 #pwn tools
 sudo apt install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
