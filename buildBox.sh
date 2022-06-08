@@ -59,6 +59,7 @@ echo "source /usr/share/gdb-peda/peda.py" >> ~/.gdbinit
 
 # ghidra & fix UI scaling
 sudo apt install ghidra
+sudo updatedb
 sed -i 's/VMARGS_LINUX=-Dsun.java2d.uiScale=1/VMARGS_LINUX=-Dsun.java2d.uiScale=2/g' $(locate support/launch.properties)
 
 #pwn tools
