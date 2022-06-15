@@ -32,6 +32,7 @@ git clone https://github.com/sullo/nikto.git
 git clone https://github.com/Ganapati/RsaCtfTool.git
 git clone https://github.com/stealthcopter/deepce.git
 git clone https://github.com/mandiant/flare-floss.git
+git clone https://github.com/apogiatzis/gdb-peda-pwndbg-gef.git
 #git clone https://github.com/gchq/CyberChef.git
 #git clone https://github.com/NebulousAnchor/Aboleth
 # install cyberchef
@@ -54,8 +55,12 @@ sudo apt install -y gobuster
 sudo apt install -y hydra-gtk
 
 # install reversing / exploit dev
-sudo apt install gdb-peda 
-echo "source /usr/share/gdb-peda/peda.py" >> ~/.gdbinit
+#sudo apt install gdb-peda 
+#echo "source /usr/share/gdb-peda/peda.py" >> ~/.gdbinit
+cd $myToolDir/gdb-peda-pwndbg-gef
+sudo ./install.sh
+sudo ./update.sh
+cd $origDir
 
 # ghidra & fix UI scaling
 sudo apt install ghidra
