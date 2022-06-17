@@ -61,6 +61,7 @@ cd $myToolDir/gdb-peda-pwndbg-gef
 sudo ./install.sh
 sudo ./update.sh
 pip install psutil pyelftools capstone
+sudo apt install gdbserver
 cd $origDir
 
 # ghidra & fix UI scaling
