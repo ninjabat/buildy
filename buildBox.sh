@@ -60,6 +60,7 @@ sudo apt install -y hydra-gtk
 cd $myToolDir/gdb-peda-pwndbg-gef
 sudo ./install.sh
 sudo ./update.sh
+pip install psutil pyelftools capstone
 cd $origDir
 
 # ghidra & fix UI scaling
