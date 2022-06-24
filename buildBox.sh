@@ -126,7 +126,6 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.v
 
 # vim code completer
 git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
-echo "Plugin 'davidhalter/jedi-vim'">>~/.vimrc
 
 # copy config files
 sudo cp compton.conf /etc/xdg/compton.conf
