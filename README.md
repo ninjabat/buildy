@@ -1,6 +1,6 @@
 # buildy
 
-This project is for automatically building attack boxes - whether it's a Parrot linux install in Hack the Box or a fresh Kali VM, the goal here is to provide a consistent set of tools and configurations... just like I like them.
+This project is for automatically building attack boxes - whether it's a Parrot Linux pwnbox in Hack the Box or a fresh Kali VM, the goal here is to provide a consistent set of tools and configurations... just like I like them.
 
 This project includes setting up obscure features like i3, vim, and nitrogen for the best window managing & text editing you can get (probably not).
 
