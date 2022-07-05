@@ -12,8 +12,8 @@ myToolDir=/home/$uName/Tools
 tempVIMRC=/home/$uName/Downloads
 homeDir=/home/$uName
 
-mkdir -p $myDir
-cd $myDir
+mkdir -p $myToolDir
+cd $myToolDir
 
 sudo apt update
 sudo apt install -y gedit vim-gtk3 xterm i3 nautilus compton nitrogen expect locate
@@ -57,6 +57,7 @@ sudo apt install -y hydra-gtk
 # install reversing / exploit dev
 #sudo apt install gdb-peda 
 #echo "source /usr/share/gdb-peda/peda.py" >> /.gdbinit
+sudo apt install gdb -y
 cd $myToolDir/gdb-peda-pwndbg-gef
 sudo ./install.sh
 sudo ./update.sh
@@ -90,7 +91,7 @@ cd $myToolDir/kerbrute
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64
 chmod +x kerbrute_linux_amd64
 
-cd $myDir
+cd $myToolDir
 python -m pip install --upgrade pip
 sudo pip install pyip pycrypto pyopenssl
 
