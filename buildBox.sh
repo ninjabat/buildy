@@ -4,7 +4,7 @@
 # usage ./buildBox 
 #
 
-uName=$( whoami )
+uName=$( users | cut -d' ' -f 1 )
 origDir=$( pwd )
 
 myDir=/home/$uName/Pentesting
