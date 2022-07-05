@@ -56,7 +56,7 @@ sudo apt install -y hydra-gtk
 
 # install reversing / exploit dev
 #sudo apt install gdb-peda 
-#echo "source /usr/share/gdb-peda/peda.py" >> ~/.gdbinit
+#echo "source /usr/share/gdb-peda/peda.py" >> /.gdbinit
 cd $myToolDir/gdb-peda-pwndbg-gef
 sudo ./install.sh
 sudo ./update.sh
@@ -115,22 +115,22 @@ echo "exec --no-startup-id nitrogen --restore" >>/etc/i3/config
 echo "exec --no-startup-id compton" >> /etc/i3/config
 
 # high DPI for i3
-cat Xresources >> ~.Xresources
-echo "xrdb -merge ~/.Xresources" >> ~/.xinitrc
+cat Xresources >> $homeDir/.Xresources
+echo "xrdb -merge ~/.Xresources" >> $homeDir/.xinitrc
 
 #
 # vim plugin manager, requires pathogen setting in vimrc
 #
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.v
+mkdir -p $homeDir/.vim/autoload $homeDir/.vim/bundle && \
+curl -LSso $homeDir/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.v
 
 # vim code completer
-git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
+git clone --recursive https://github.com/davidhalter/jedi-vim.git $homeDir/.vim/bundle/jedi-vim
 
 # copy config files
 sudo cp compton.conf /etc/xdg/compton.conf
 sudo cp vimrc /etc/vim/vimrc
-cp .vimrc ~/.vimrc
+cp .vimrc $homeDir/.vimrc
 sudo cp bg-saved.cfg $homeDir/.config/nitrogen/bg-saved.cfg
 sudo cp nitrogen.cfg $homeDir/.config/nitrogen/nitrogen.cfg
 cp i3config $homeDir/.config/i3/config
