@@ -130,7 +130,7 @@ git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/
 # copy config files
 sudo cp compton.conf /etc/xdg/compton.conf
 sudo cp vimrc /etc/vim/vimrc
-cp .vmrc ~/.vimrc
+cp .vimrc ~/.vimrc
 sudo cp bg-saved.cfg $homeDir/.config/nitrogen/bg-saved.cfg
 sudo cp nitrogen.cfg $homeDir/.config/nitrogen/nitrogen.cfg
 cp i3config $homeDir/.config/i3/config
