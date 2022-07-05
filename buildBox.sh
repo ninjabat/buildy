@@ -61,16 +61,16 @@ cd $myToolDir/gdb-peda-pwndbg-gef
 sudo ./install.sh
 sudo ./update.sh
 pip install psutil pyelftools capstone
-sudo apt install gdbserver
+sudo apt install -y gdbserver
 cd $origDir
 
 # ghidra & fix UI scaling
-sudo apt install ghidra
+sudo apt install -y ghidra
 sudo updatedb
 sed -i 's/VMARGS_LINUX=-Dsun.java2d.uiScale=1/VMARGS_LINUX=-Dsun.java2d.uiScale=2/g' $(locate support/launch.properties)
 
 #pwn tools
-sudo apt install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+sudo apt install -y python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade pwntools
 echo "export PATH=$PATH:~/.local/bin" >> $homeDir/.zshrc
