@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 #
 # usage ./buildBox 
@@ -16,7 +16,7 @@ mkdir -p $myDir
 cd $myDir
 
 sudo apt update
-sudo apt install -y gedit vim-gtk xterm i3 nautilus compton nitrogen expect locate
+sudo apt install -y gedit vim-gtk3 xterm i3 nautilus compton nitrogen expect locate
 
 
 #install ODAT
