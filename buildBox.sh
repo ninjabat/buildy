@@ -139,7 +139,7 @@ cp i3config $homeDir/.config/i3/config
 sudo timedatectl set-timezone America/New_York
 
 # restart services
-nitrogen restart
+nitrogen --restore
 pkill compton && compton
 
 # cleanup 
