@@ -59,8 +59,8 @@ sudo apt install -y hydra-gtk
 #echo "source /usr/share/gdb-peda/peda.py" >> /.gdbinit
 sudo apt install gdb -y
 cd $myToolDir/gdb-peda-pwndbg-gef
-sudo ./install.sh
-sudo ./update.sh
+sudo -i $uName ./install.sh
+sudo -i $uName ./update.sh
 pip install psutil pyelftools capstone
 sudo apt install -y gdbserver
 cd $origDir
