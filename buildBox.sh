@@ -123,7 +123,7 @@ echo "xrdb -merge ~/.Xresources" >> $homeDir/.xinitrc
 # vim plugin manager, requires pathogen setting in vimrc
 #
 mkdir -p $homeDir/.vim/autoload $homeDir/.vim/bundle && \
-curl -LSso $homeDir/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.v
+curl -LSso $homeDir/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # vim code completer
 git clone --recursive https://github.com/davidhalter/jedi-vim.git $homeDir/.vim/bundle/jedi-vim
