@@ -16,7 +16,7 @@ mkdir -p $myToolDir
 cd $myToolDir
 
 sudo apt update
-sudo apt install -y gedit vim-gtk3 xterm i3 nautilus compton nitrogen expect locate
+sudo apt install -y gedit vim-gtk3 xterm i3 nautilus compton nitrogen expect locate build-essential
 
 
 #install ODAT
