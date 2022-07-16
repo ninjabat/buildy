@@ -72,7 +72,7 @@ sudo updatedb
 sed -i 's/VMARGS_LINUX=-Dsun.java2d.uiScale=1/VMARGS_LINUX=-Dsun.java2d.uiScale=2/g' $(locate support/launch.properties)
 
 #pwn tools
-sudo apt install -y python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+sudo apt install -y python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential gcc-multilib
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade pwntools
 echo "export PATH=$PATH:~/.local/bin" >> $homeDir/.zshrc
