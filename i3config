@@ -182,3 +182,4 @@ bar {
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
 exec --no-startup-id vmware-user-suid-wrapper host-guest copy&paste
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
