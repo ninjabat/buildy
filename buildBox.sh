@@ -77,6 +77,9 @@ python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade pwntools
 echo "export PATH=$PATH:~/.local/bin" >> $homeDir/.zshrc
 
+# ropper
+sudo apt install ropper
+
 # install impacket
 mkdir -p $myToolDir/impacket
 git clone https://github.com/SecureAuthCorp/impacket.git $myToolDir/impacket
