@@ -55,6 +55,9 @@ sudo apt install -y cadaver
 sudo apt install -y gobuster
 sudo apt install -y hydra-gtk
 
+# install seclists
+sudo apt install -y seclists
+
 # install reversing / exploit dev
 #sudo apt install gdb-peda 
 #echo "source /usr/share/gdb-peda/peda.py" >> /.gdbinit
