@@ -81,7 +81,7 @@ python3 -m pip install --upgrade pwntools
 echo "export PATH=$PATH:~/.local/bin" >> $homeDir/.zshrc
 
 # ropper
-sudo apt install ropper
+sudo apt install -y ropper
 
 # install impacket
 mkdir -p $myToolDir/impacket
