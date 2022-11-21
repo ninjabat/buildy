@@ -28,7 +28,6 @@ sudo apt install -y gedit vim-gtk3 xterm i3 nautilus compton nitrogen expect loc
 
 # clone various tools
 cd $myToolDir
-git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git
 git clone https://github.com/sullo/nikto.git
 git clone https://github.com/Ganapati/RsaCtfTool.git
 git clone https://github.com/stealthcopter/deepce.git
@@ -103,6 +102,9 @@ python -m pip install --upgrade pip
 sudo pip install pyip pycrypto pyopenssl
 
 sudo apt install -y snmp strongswan powercat 
+
+# winpeas / linpeas
+sudo apt install -y peass
 
 #
 # Copy local tools & backgrounds
