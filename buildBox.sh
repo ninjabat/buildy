@@ -134,7 +134,7 @@ chown $uName:$uName $homeDir/.xinitrc
 #
 # vim plugin manager, requires pathogen setting in vimrc
 #
-mkdir -p $homeDir/.vim/autoload $homeDir/.vim/bundle && \
+mkdir -p $homeDir/.vim/autoload $homeDir/.vim/bundle
 sudo -u $uName curl -LSso $homeDir/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 chown -R $uName:$uName $homeDir/.vim/
 
