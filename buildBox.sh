@@ -62,8 +62,8 @@ sudo apt install -y seclists
 #echo "source /usr/share/gdb-peda/peda.py" >> /.gdbinit
 sudo apt install gdb -y
 cd $myToolDir/gdb-peda-pwndbg-gef
-sudo -i $uName ./install.sh
-sudo -i $uName ./update.sh
+sudo -u $uName ./install.sh
+sudo -u $uName ./update.sh
 pip install psutil pyelftools capstone
 sudo apt install -y gdbserver
 cd $origDir
