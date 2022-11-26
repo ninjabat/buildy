@@ -16,4 +16,4 @@ This project also includes precompiled static tools that might be useful; these 
 
 This project incudes windows binaries like netcat & plink, but also a few common privesc exploits compiled from source by me.
 
-Finally, I'm stashing my buffer overflow templates here for safe keeping.  Dependencies like pwntools & pwndbg should be satisfied via the build script.
+Finally, some binary exploitation tools & templates that are useful.
