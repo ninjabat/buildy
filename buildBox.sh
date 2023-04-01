@@ -33,15 +33,12 @@ git clone https://github.com/Ganapati/RsaCtfTool.git
 git clone https://github.com/stealthcopter/deepce.git
 git clone https://github.com/mandiant/flare-floss.git
 git clone https://github.com/apogiatzis/gdb-peda-pwndbg-gef.git
-#git clone https://github.com/gchq/CyberChef.git
-#git clone https://github.com/NebulousAnchor/Aboleth
-# install cyberchef
-#sudo apt install -y npm
-#sudo npm install -g grunt-cli
-#cd CyberChef
-#sudo npm install
-#grunt dev & disown;
-#cd ..
+
+# install cyberchef as docker container
+sudo apt install -y docker.io
+sudo docker pull mpepping/cyberchef
+sudo docker run -d -p 8000:8000 mpepping/cyberchef
+echo "access cyberchef by going to http://localhost:8000"
 
 # install evilwinrm
 sudo gem install evil-winrm
