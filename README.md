@@ -5,12 +5,17 @@ This project is for automatically building attack boxes - whether it's a Parrot 
 This project includes setting up obscure features like i3, vim, and nitrogen for the best window managing & text editing you can get (probably not).
 
 ## Installation
-  ```git clone https://github.com/ninjabat/buildy.git 
+```
+  git clone https://github.com/ninjabat/buildy.git 
   cd buildy
-  chmod +x buildBox.sh
-  sudo ./buildBox.sh
-  ```
-  
+  sudo ./build.sh
+```
+You can remove tools that you don't want to install by simply making specific scripts in the scripts/ directory non executable:
+```
+cd scripts
+chmod -x 020*
+```
+
 ## Tools 
 This project also includes precompiled static tools that might be useful; these are not updated (almost ever), but are bread & butter tools like netcat and nmap.  
 
