@@ -61,7 +61,7 @@ sudo apt install gdb -y
 cd $myToolDir/gdb-peda-pwndbg-gef
 sudo -u $uName ./install.sh
 sudo -u $uName ./update.sh
-pip install psutil pyelftools capstone
+sudo -u $uName pip install psutil pyelftools capstone
 sudo apt install -y gdbserver
 cd $origDir
 
@@ -72,8 +72,8 @@ sed -i 's/VMARGS_LINUX=-Dsun.java2d.uiScale=1/VMARGS_LINUX=-Dsun.java2d.uiScale=
 
 #pwn tools
 sudo apt install -y python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential gcc-multilib
-python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade pwntools
+sudo -u $uName python3 -m pip install --upgrade pip
+sudo -u $uName python3 -m pip install --upgrade pwntools
 echo "export PATH=$PATH:~/.local/bin" >> $homeDir/.zshrc
 
 # ropper
@@ -82,10 +82,10 @@ sudo apt install -y ropper
 # install impacket
 mkdir -p $myToolDir/impacket
 git clone https://github.com/SecureAuthCorp/impacket.git $myToolDir/impacket
-sudo pip3 install -r $myToolDir/impacket/requirements.txt
+sudo -u $uName pip3 install -r $myToolDir/impacket/requirements.txt
 cd $myToolDir/impacket/
-sudo pip3 install .
-sudo python3 setup.py install
+sudo -u $uName pip3 install .
+sudo -u $uName python3 setup.py install
 cd $origDir
 
 # get kerbrute
@@ -95,8 +95,8 @@ wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_
 chmod +x kerbrute_linux_amd64
 
 cd $myToolDir
-python -m pip install --upgrade pip
-sudo pip install pyip pycrypto pyopenssl
+sudo -u $uNamepython -m pip install --upgrade pip
+sudo -u $uName pip install pyip pycrypto pyopenssl
 
 sudo apt install -y snmp strongswan powercat 
 
@@ -139,7 +139,7 @@ chown $uName:$uName $homeDir/.xinitrc
 # vim plugin manager, requires pathogen setting in vimrc
 #
 mkdir -p $homeDir/.vim/autoload $homeDir/.vim/bundle
-sudo -u $uName curl -LSso $homeDir/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+sudo -u $uName wget https://tpo.pe/pathogen.vim -O $homeDir/.vim/autoload/pathogen.vim
 chown -R $uName:$uName $homeDir/.vim/
 
 # vim code completer
