@@ -11,9 +11,9 @@ sudo apt install -y gedit vim-gtk3 xterm i3 nautilus compton nitrogen expect loc
 # Copy local tools & backgrounds
 #
 cd $origDir
-cp -r tools/ $myToolDir/
+sudo -i $uName cp -r tools/ $myToolDir/
 mkdir -p $homeDir/Pictures
-cp backgrounds/* $homeDir/Pictures
+sudo -i $uName cp backgrounds/* $homeDir/Pictures
 chown -R $uName:$uName $homeDir/Pictures
 
 #
@@ -35,8 +35,8 @@ chown $uName:$uName $homeDir/.xinitrc
 #
 # vim plugin manager, requires pathogen setting in vimrc
 #
-mkdir -p $homeDir/.vim/autoload $homeDir/.vim/bundle
-sudo -u $uName wget https://tpo.pe/pathogen.vim -O $homeDir/.vim/autoload/pathogen.vim
+sudo -u $uName mkdir -p $homeDir/.vim/autoload $homeDir/.vim/bundle
+sudo -u $uName wget 'https://tpo.pe/pathogen.vim' -O $homeDir/.vim/autoload/pathogen.vim
 chown -R $uName:$uName $homeDir/.vim/
 
 # vim code completer
