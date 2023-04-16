@@ -15,13 +15,13 @@ mkdir -p $myToolDir
 echo "Installing tools, this may take a while!"
 
 # Loop through all .sh files in the scripts directory
-for script in ./scripts/*.sh
+for script in $origDir/scripts/*.sh
 do
 # Check if the file is executable
   if [ -x "$script" ]
   then
     # Run the executable script with the environmental variables set
-    source "$script"
+    . "$script"
   else
     echo "$script is not executable, skipping..."
   fi 
