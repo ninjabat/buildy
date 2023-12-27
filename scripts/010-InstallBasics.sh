@@ -40,19 +40,19 @@ mkdir -p $homeDir/.config/nitrogen/ $homeDir/.config/i3/
 # Check if the line exists in the file
 fileName=/etc/i3/config
 line_to_add='exec --no-startup-id nitrogen --restore'
-idempotentSED($fileName,$line_to_add)
+idempotentSED $fileName $line_to_add
 
 line_to_add='exec --no-startup-id compton'
-idempotentSED($fileName,$line_to_add)
+idempotentSED $fileName $line_to_add
 
 chown -R $uName:$uName $homeDir/.config/i3/
 
 # high DPI for i3
-cp configs/Xresources >> $homeDir/.Xresources
+cp configs/Xresources $homeDir/.Xresources
 
 fileName=$homeDir/.xinitrc
 line_to_add='xrdb -merge ~/.Xresources'
-idempotentSED($fileName,$line_to_add)
+idempotentSED $fileName $line_to_add
 chown $uName:$uName $homeDir/.xinitrc
 
 #
