@@ -2,6 +2,19 @@
 #
 # install basics, mostly GUI, vim
 
+# define a function to take in a file name and line, check if that line exists, then add it if it doesn't exit in a file
+idempotentSED(){
+    fileName=$1
+    line_to_add=$2
+    if grep -q "$line_to_add" "$fileName"; then
+        echo "Buildy change already made in $filename."
+    else
+    # Line doesn't exist, append it to the file
+    echo "$line_to_add" >> "$filename"
+    fi
+}
+
+
 sudo apt install -y gedit vim-gtk3 xterm i3 nautilus compton nitrogen expect locate build-essential
 
 
@@ -23,13 +36,23 @@ cd $origDir
 sed -i "s/kali/$uName/g" configs/bg-saved.cfg
 sed -i "s/kali/$uName/g" configs/nitrogen.cfg
 mkdir -p $homeDir/.config/nitrogen/ $homeDir/.config/i3/
-echo "exec --no-startup-id nitrogen --restore" >>/etc/i3/config
-echo "exec --no-startup-id compton" >> /etc/i3/config
+
+# Check if the line exists in the file
+fileName=/etc/i3/config
+line_to_add='exec --no-startup-id nitrogen --restore'
+idempotentSED($fileName,$line_to_add)
+
+line_to_add='exec --no-startup-id compton'
+idempotentSED($fileName,$line_to_add)
+
 chown -R $uName:$uName $homeDir/.config/i3/
 
 # high DPI for i3
-cat configs/Xresources >> $homeDir/.Xresources
-echo "xrdb -merge ~/.Xresources" >> $homeDir/.xinitrc
+cp configs/Xresources >> $homeDir/.Xresources
+
+fileName=$homeDir/.xinitrc
+line_to_add='xrdb -merge ~/.Xresources'
+idempotentSED($fileName,$line_to_add)
 chown $uName:$uName $homeDir/.xinitrc
 
 #
