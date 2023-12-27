@@ -11,9 +11,9 @@ sudo apt install -y gedit vim-gtk3 xterm i3 nautilus compton nitrogen expect loc
 # Copy local tools & backgrounds
 #
 cd $origDir
-sudo -i $uName cp -r tools/ $myToolDir/
+sudo -u $uName cp -r tools/ $myToolDir/
 mkdir -p $homeDir/Pictures
-sudo -i $uName cp backgrounds/* $homeDir/Pictures
+sudo -u $uName cp backgrounds/* $homeDir/Pictures
 chown -R $uName:$uName $homeDir/Pictures
 
 #
