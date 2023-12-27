@@ -3,14 +3,16 @@
 # install basics, mostly GUI, vim
 
 # define a function to take in a file name and line, check if that line exists, then add it if it doesn't exit in a file
+# pass arguments in double quotes:
+# idempotentSED "$fileName" "$line_to_add"
 idempotentSED(){
     fileName=$1
     line_to_add=$2
     if grep -q "$line_to_add" "$fileName"; then
-        echo "Buildy change already made in $filename."
+        echo "Buildy change already made in $fileName."
     else
     # Line doesn't exist, append it to the file
-    echo "$line_to_add" >> "$filename"
+    echo "$line_to_add" >> "$fileName"
     fi
 }
 
@@ -40,10 +42,10 @@ mkdir -p $homeDir/.config/nitrogen/ $homeDir/.config/i3/
 # Check if the line exists in the file
 fileName=/etc/i3/config
 line_to_add='exec --no-startup-id nitrogen --restore'
-idempotentSED $fileName $line_to_add
+idempotentSED "$fileName" "$line_to_add"
 
 line_to_add='exec --no-startup-id compton'
-idempotentSED $fileName $line_to_add
+idempotentSED "$fileName" "$line_to_add"
 
 chown -R $uName:$uName $homeDir/.config/i3/
 
@@ -52,7 +54,7 @@ cp configs/Xresources $homeDir/.Xresources
 
 fileName=$homeDir/.xinitrc
 line_to_add='xrdb -merge ~/.Xresources'
-idempotentSED $fileName $line_to_add
+idempotentSED "$fileName" "$line_to_add"
 chown $uName:$uName $homeDir/.xinitrc
 
 #
