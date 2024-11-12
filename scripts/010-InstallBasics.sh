@@ -17,10 +17,7 @@ idempotentSED(){
 }
 
 
-sudo apt install -y gedit vim-gtk3 xterm i3 nautilus compton nitrogen expect locate build-essential
-
-
-sudo apt install -y gedit vim-gtk3 xterm i3 nautilus compton nitrogen expect locate build-essential
+sudo apt install -y gedit vim-gtk3 xterm i3 nautilus compton nitrogen expect locate build-essential remmina
 
 #
 # Copy local tools & backgrounds
